@@ -6,14 +6,15 @@
 
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
-# Inherit some common AEX stuff
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit from our custom product configuration
+TARGET_BOOT_ANIMATION_RES := 1080
+$(call inherit-product, vendor/swift/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_beryllium
+PRODUCT_NAME := swift_beryllium
 PRODUCT_DEVICE := beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := POCO F1
